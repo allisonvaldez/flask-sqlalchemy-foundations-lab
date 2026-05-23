@@ -24,7 +24,7 @@ def index():
 
 # Define the /earthquakes/<id> route
 @app.route('/earthquakes/<int:id>')
-def get_earthquakes_by_id():
+def get_earthquakes_by_id(id):  # ← FIXED: added 'id' parameter here
     # Search the database for the earthquake with the matching id 
     earthquake = db.session.get(Earthquake, id)
 
